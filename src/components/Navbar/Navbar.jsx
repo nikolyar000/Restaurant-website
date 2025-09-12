@@ -2,6 +2,35 @@ import React from 'react';
 import Logo from "../../assets/logo.png";
 import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
+import DarkMode from "./DarkMode";
+
+const Menu = [
+  {
+    id: 1,
+    name: "Home",
+    link: "/#",
+  },
+  {
+    id: 2,
+    name: "Top Rated",
+    link: "/#services",
+  },
+  {
+    id: 3,
+    name: "Kids Wear",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Mens Wear",
+    link: "/#",
+  },
+  {
+    id: 3,
+    name: "Electronics",
+    link: "/#",
+  },
+];
 
 const Navbar = () => {
   return (
@@ -35,10 +64,28 @@ const Navbar = () => {
                 className="text-xl text-white drop-shadow-sm cursor-pointer"
                 />
             </button>
+            {/* Darkmode switch */}
+            <div>
+                <DarkMode/>
+            </div>
         </div>
     </div>
     {/* lower Navbar */}
-    <div></div>
+    <div className="flex justify-center">
+        <ul className="sm:flex hidden items-center gap-4">
+            {Menu.map((data)=>(
+                <li key={data.id}>
+                    <a 
+                    href={data.link}
+                    className="inline-block px-4 hover:text-primary duration-200"
+                    >
+                    {data.name}
+                    </a>
+                </li>
+            ))}
+            {/* Simple Dropdown and Links */}
+        </ul>
+    </div>
   </div>
   )
 }
