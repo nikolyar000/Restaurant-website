@@ -26,9 +26,14 @@ const Banner = () => {
                     <p className="text-sm text-gray-500 tracking-wide leading-5">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus quo in molestiae!
                     </p>
-                    <div>
-                        <div className="flex items-center gap-4">
-                            <GrSecure />
+                    <div className="flex flex-col gap-4">
+                        <div data-aos="fade-up" className="flex items-center gap-4">
+                            <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violer-100 dark:bg-violet-400" />
+                            <p>Quality Products</p>
+                        </div>
+                        <div data-aos="fade-up" className="flex items-center gap-4">
+                            <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400"/>
+                            <p>Fast Delivery</p>
                         </div>
                     </div>
                 </div>
